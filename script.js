@@ -62,7 +62,7 @@ function calcularViaje() {
 }
 
 function calcularCosto(distanciaMetros) {
-  const bandera = 1200;
+  const bandera = 2177;
   const tramos = Math.ceil(distanciaMetros / 100);
   return bandera + tramos * 90;
 }
