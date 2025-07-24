@@ -96,4 +96,15 @@ function usarMiUbicacion() {
   }, () => {
     alert("No se pudo obtener tu ubicación. Verificá permisos del navegador.");
   });
+
+  navigator.geolocation.getCurrentPosition(
+    (posicion) => {
+      console.log("Coordenadas:", posicion.coords.latitude, posicion.coords.longitude);
+    },
+    (error) => {
+      console.error("Error geolocalización:", error);
+      alert("No se pudo obtener la ubicación: " + error.message);
+    }
+  );
+  
 }
